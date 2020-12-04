@@ -1,15 +1,24 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { ProductsTemplate } from './Products';
 
-// <div className="product-container">
-//   <img src="" alt="" clssName="image-products" />
-// </div>
-
-const ProductsPage = () => {
+const ProductsPage = (props) => {
     return (
-        <div className="productPage-container">
-            <ProductsTemplate />
+        <div className="products-container">
+            <h1>Products</h1>
+            {
+                props.products.map((product) => {
+                    return <ProductsTemplate key={product.id} {...product} />
+                })
+            }
         </div>
     )
 }
-export default ProductsPage;
+
+const mapStateToProps = (state) => {
+    return {
+        products: state.products
+    }
+}
+
+export default connect(mapStateToProps)(ProductsPage);

@@ -1,5 +1,5 @@
 .homePage-container {
-    background-color: #ffb84d;
+    background-color: $orange;
     display: flex;
     height: 100vh;
 }
@@ -14,8 +14,13 @@
     right: 0;
 }
 
+.products-container {
+    display: flex;
+    margin: $l-margin;
+}
+
 .notFoundPage-container {
-    background-color: #ffb84d;
+    background-color:$orange;
     height: 100vh;
     padding: $xl-size;
     font-size: $l-size;
