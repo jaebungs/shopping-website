@@ -1,9 +1,14 @@
 import React from 'react';
+import { ProductsTemplate } from './Products';
+
+// <div className="product-container">
+//   <img src="" alt="" clssName="image-products" />
+// </div>
 
 const ProductsPage = () => {
     return (
-        <div>
-            This is ProductsPage
+        <div className="productPage-container">
+            <ProductsTemplate />
         </div>
     )
 }
