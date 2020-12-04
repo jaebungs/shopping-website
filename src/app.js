@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import AppRouters from './routers/AppRouters';
 import 'normalize.css/normalize.css';
-// import './styles/styles.scss';
+import './styles/styles.scss';
 
 /* Things I have to do
     Home Page

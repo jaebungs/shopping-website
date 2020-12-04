@@ -1,0 +1,10 @@
+.image-home {
+    width: 550px;
+    height: 650px;
+}
+
+@media (max-width: $m-breakpoint) {
+    .image-home {
+        display: none;
+    }
+}

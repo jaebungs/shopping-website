@@ -1,5 +1,15 @@
-.container {
-    max-width: 60rem;
-    margin: 0 auto;
-    padding: 0 $m-size;
+.homePage-container {
+    background-color: #ffb84d;
+    display: flex;
+    height: 100vh;
+}
+.homePage-intro-container {
+    margin: 25rem 40rem 30rem 12rem;
+    font-size: $l-size;
+}
+
+.image-contianer-homePage {
+    position: absolute;
+    top: 70px;
+    right: 0;
 }

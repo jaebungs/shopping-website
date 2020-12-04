@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => (
     <header>
-        <h1>Ultimate Workspace Gadgets</h1>
         <NavLink
             exact
             to='/'
