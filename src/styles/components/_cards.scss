@@ -1,3 +1,23 @@
-.product-card{
+.product-card {
     margin: $s-margin;
+    padding: $s-padding;
+    border: 0.5px solid $light-orange;
+    box-sizing: border-box;
+
+    h4{
+        margin: $xs-margin;
+    }
+    
+    p{
+        font-size: $s-size;
+    }
+
+    input {
+        text-align: center;
+        width: 20%;
+    };
+
+    &:hover{
+        box-shadow: 3px 3px 2px 2px $light-brown;
+    }
 }

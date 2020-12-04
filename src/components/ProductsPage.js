@@ -5,7 +5,6 @@ import { ProductsTemplate } from './Products';
 const ProductsPage = (props) => {
     return (
         <div className="products-container">
-            <h1>Products</h1>
             {
                 props.products.map((product) => {
                     return <ProductsTemplate key={product.id} {...product} />

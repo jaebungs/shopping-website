@@ -8,9 +8,15 @@ export const ProductsTemplate = ({ id, img, name, price, quantity }) => (
             alt={img + " img"}
             className="image-products"
         />
-        <h5>{name}</h5>
+        <h4>{name}</h4>
         <p>{price}$ CAD</p>
-        <input></input>
-        <button>Add Cart</button>
+        <div>
+            <button className="quantity-btn btn">-</button>
+            <label for="quantity">
+                <input type="text" name="quantity" id="quantity" value="1" readonly />
+            </label>
+            <button className="quantity-btn btn">+</button>
+        </div>
+        <button className="add-cart-btn btn">Add Cart</button>
     </div>
 )

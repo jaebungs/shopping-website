@@ -16,7 +16,11 @@
 
 .products-container {
     display: flex;
-    margin: $l-margin;
+    flex-flow: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: $l-margin;
 }
 
 .notFoundPage-container {
