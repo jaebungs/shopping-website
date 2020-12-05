@@ -1,7 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { cartAddProduct } from '../actions/cart';
 
-export const ProductsTemplate = ({ id, img, name, price, quantity }) => (
+const ProductsTemplate = ({ id, img, name, price, quantity, dispatch }) => {
+    return (
     <div className="product-card">
         <img 
             src={img}
@@ -12,11 +14,24 @@ export const ProductsTemplate = ({ id, img, name, price, quantity }) => (
         <p>{price}$ CAD</p>
         <div>
             <button className="quantity-btn btn">-</button>
-            <label for="quantity">
-                <input type="text" name="quantity" id="quantity" value="1" readonly />
+            <label htmlFor={"quantityFor"+id}>
+                <input type="text" name="quantity" id={"quantityFor"+ id} value="1" readOnly />
             </label>
             <button className="quantity-btn btn">+</button>
         </div>
-        <button className="add-cart-btn btn">Add Cart</button>
+        <button 
+            className="add-cart-btn btn"
+            onClick={()=>{
+                dispatch(cartAddProduct({ id, img, name, price, quantity }))
+            }}
+        >Add Cart</button>
     </div>
-)
+)}
+
+const mapStateToProps = (state, props) => {
+    return {
+        
+    }
+}
+
+export default connect()(ProductsTemplate)

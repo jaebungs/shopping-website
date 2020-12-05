@@ -2,6 +2,11 @@
     background-color: #fff;
     border: 1px solid $brown;
     font-size: $m-size;
+
+    &:hover{
+        cursor: pointer;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 3px rgba(0,0,0,0.24);;
+    }
 }
 
 .quantity-btn {
@@ -11,8 +16,5 @@
 .add-cart-btn {
     padding: 5px 15px;
 
-    &:hover{
-        background-color: #000;
-        color: #fff;
-    }
+    
 }
