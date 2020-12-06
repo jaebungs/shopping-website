@@ -4,15 +4,25 @@ const productsReducerDefaultState = [...ProductsData]
 
 const productsReducer = (state = productsReducerDefaultState, action) => {
     switch(action.type) {
-        case 'PRODUCT_EDIT_QUANTITY':
+        case 'PRODUCT_QUANTITY_INCREMENT':
             return state.map((product) => {
                 if (product.id === action.id){
-                    return {
-                        ...state,
-                        ...action.quantity
+                    return product ={
+                        ...product,
+                        quantity: product.quantity + 1
                     }
+                } else {
+                    return product;
                 }
-                else {
+            });
+        case 'PRODUCT_QUANTITY_DECREMENT':
+            return state.map((product) => {
+                if (product.id === action.id){
+                    return product ={
+                        ...product,
+                        quantity: product.quantity + -1
+                    }
+                } else {
                     return product;
                 }
             });

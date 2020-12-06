@@ -1,5 +1,9 @@
-export const productEditQuantity = (id, quantity) => ({
-    type: 'PRODUCT_EDIT_QUANTITY',
-    id,
-    quantity
+export const productQuantityIncrement = (id) => ({
+    type: 'PRODUCT_QUANTITY_INCREMENT',
+    id
+})
+
+export const productQuantityDecrement = (id) => ({
+    type: 'PRODUCT_QUANTITY_DECREMENT',
+    id
 })

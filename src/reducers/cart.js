@@ -14,7 +14,7 @@ const cartReducer = (state = cartReducerDefault, action) => {
                 if (product.id === action.id) {
                     return product = {
                         ...product,
-                        ...action.quantity
+                        quantity: product.quantity + action.quantity
                     }
                 } else {
                     return product;
