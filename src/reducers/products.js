@@ -26,6 +26,17 @@ const productsReducer = (state = productsReducerDefaultState, action) => {
                     return product;
                 }
             });
+        case 'PRODUCT_QUANTITY_EDIT':
+            return state.map((product)=> {
+                if (product.id === action.id){
+                    return product = {
+                        ...product,
+                        quantity: action.value
+                    }
+                } else {
+                    return product;
+                }
+            });
         default:
             return state;
     }

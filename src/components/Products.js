@@ -1,9 +1,21 @@
 import React from "react";
 import { connect } from "react-redux";
 import { cartAddProduct } from "../actions/cart";
-import { productQuantityDecrement, productQuantityIncrement } from "../actions/products";
+import { productQuantityDecrement, productQuantityIncrement, productQuantityEdit } from "../actions/products";
 
 const ProductsTemplate = ({ id, img, name, price, quantity, dispatch, carts }) => {
+
+
+  const onInputChange = (e) => {
+    const quantityInput = e.target.value
+      
+      if (quantityInput === '' || quantityInput.match(/^[1-9][0-9]*$/)){
+          dispatch(productQuantityEdit(id, parseInt(quantityInput)));
+      } else {
+        quantityInput = parseInt(1)
+      }
+  }
+
   return (
     <div className="product-card">
       <img src={img} alt={img + " img"} className="image-products" />
@@ -26,14 +38,13 @@ const ProductsTemplate = ({ id, img, name, price, quantity, dispatch, carts }) =
             name="quantity"
             id={"quantityFor" + id}
             value={quantity}
-            readOnly
+            onChange={onInputChange}
           />
         </label>
         <button
           className="quantity-btn btn"
           onClick={() => {
             dispatch(productQuantityIncrement(id));
-
           }}
         >
           +
@@ -44,7 +55,7 @@ const ProductsTemplate = ({ id, img, name, price, quantity, dispatch, carts }) =
         onClick={() => {
           if (carts.find(cart => cart.id == id)){
             alert('Item is already in the cart')
-          } else {
+          } else if (quantity >= 1) {
             dispatch(cartAddProduct({ id, img, name, price, quantity }));
           }
         }}
