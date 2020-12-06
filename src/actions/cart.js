@@ -16,13 +16,13 @@ export const cartAddProduct = (
     }
 })
 
-export const CartRemoveProduct = (id) => ({
+export const cartRemoveProduct = (id) => ({
     type: 'CART_REMOVE_PRODUCT',
     id
 })
 
-export const CartQuantityEditProduct = ( id, quantity ) => ({
-    tpye: 'CART_QUANTITY_EDIT_RPODUCT',
+export const cartQuantityEditProduct = ( {id, quantity} ) => ({
+    type: 'CART_QUANTITY_EDIT_RPODUCT',
     id,
     quantity
 })

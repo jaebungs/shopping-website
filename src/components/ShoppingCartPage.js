@@ -18,7 +18,7 @@ const ShoppingCartPage = (props) => {
     tax = subtotal * 0.3;
     total = subtotal + tax;
     setSubtotal(subtotal);
-  }, [subtotal]);
+  }, [subtotal, props]);
 
   return (
     <div className="shoppingCartPage-container">

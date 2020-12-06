@@ -20,7 +20,7 @@ const productsReducer = (state = productsReducerDefaultState, action) => {
                 if (product.id === action.id){
                     return product ={
                         ...product,
-                        quantity: product.quantity + -1
+                        quantity: product.quantity - 1
                     }
                 } else {
                     return product;

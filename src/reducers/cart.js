@@ -8,7 +8,7 @@ const cartReducer = (state = cartReducerDefault, action) => {
                 action.product
             ];
         case 'CART_REMOVE_PRODUCT':
-            return state.filter((id) => id !== action.id);
+            return state.filter((cart) => cart.id !== action.id);
         case 'CART_QUANTITY_EDIT_RPODUCT':
             return state.map((product) => {
                 if (product.id === action.id) {
