@@ -76,7 +76,7 @@ const ShoppingCartPage = (props) => {
 const mapStateToProps = (state) => {
   return {
     carts: state.carts
-  };
+  }
 };
 
 export default connect(mapStateToProps)(ShoppingCartPage);

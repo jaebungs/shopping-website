@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { cartAddProduct } from "../actions/cart";
 import { productQuantityDecrement, productQuantityIncrement } from "../actions/products";
 
-const ProductsTemplate = ({ id, img, name, price, quantity, dispatch }) => {
+const ProductsTemplate = ({ id, img, name, price, quantity, dispatch, carts }) => {
   return (
     <div className="product-card">
       <img src={img} alt={img + " img"} className="image-products" />
@@ -42,7 +42,11 @@ const ProductsTemplate = ({ id, img, name, price, quantity, dispatch }) => {
       <button
         className="add-cart-btn btn"
         onClick={() => {
-          dispatch(cartAddProduct({ id, img, name, price, quantity }));
+          if (carts.find(cart => cart.id == id)){
+            alert('Item is already in the cart')
+          } else {
+            dispatch(cartAddProduct({ id, img, name, price, quantity }));
+          }
         }}
       >
         Add Cart
@@ -51,4 +55,10 @@ const ProductsTemplate = ({ id, img, name, price, quantity, dispatch }) => {
   );
 };
 
-export default connect()(ProductsTemplate);
+const mapStateToProps = (state) => {
+  return {
+    carts: state.carts
+  }
+}
+
+export default connect(mapStateToProps)(ProductsTemplate);
