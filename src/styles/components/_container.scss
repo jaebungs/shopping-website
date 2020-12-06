@@ -23,6 +23,20 @@
     margin-top: $l-margin;
 }
 
+.shoppingCartPage-container {
+    margin: $l-margin;
+    width: 50%;
+    height: 100vh;
+}
+
+.cart-subtitle-container{
+    display: grid;
+    grid-template-columns: $grid;
+    justify-items: center;
+    align-items: center;
+    padding: $s-padding;
+}
+
 .notFoundPage-container {
     background-color:$orange;
     height: 100vh;
