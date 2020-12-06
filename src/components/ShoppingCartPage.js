@@ -7,6 +7,7 @@ const ShoppingCartPage = (props) => {
 
   const [subtotal, setSubtotal] = useState(0);
 
+  //When cart store and price change, update summary prices.
   useEffect(() => {
     let subtotal = 0;
     let tax = 0;
@@ -33,17 +34,20 @@ const ShoppingCartPage = (props) => {
           <h5></h5>
         </div>
 
-        {props.carts.map((cart, index) => {
-          return (
-            <ShoppingCartProductsTemplate
-              key={cart.id}
-              index={index}
-              {...cart}
-            />
-          );
-        })}
+        {(props.carts.length === 0) ? <h2>No items in your cart.</h2> :
+          props.carts.map((cart, index) => {
+            return (
+              <ShoppingCartProductsTemplate
+                key={cart.id}
+                index={index}
+                {...cart}
+              />
+            );
+          })
+        }
+        
       </div>
-
+      
       <div className="cart-summary-container">
         <h3>Summary</h3>
         <div className="flex-space-between">
