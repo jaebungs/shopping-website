@@ -75,7 +75,7 @@ const ShoppingCartPage = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    carts: state.carts,
+    carts: state.carts
   };
 };
 
