@@ -16,3 +16,14 @@
 .add-cart-btn {
     padding: 5px 15px;
 }
+
+.remove-btn {
+    color: red;
+    border: none;
+}
+
+.checkout-btn{
+    border: 2px solid $light-dark;
+    margin: $s-margin;
+    padding: 10px 20px;
+}

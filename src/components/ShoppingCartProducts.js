@@ -15,7 +15,7 @@ const ShoppingCartProductsTemplate = ({ id, img, name, price, quantity, index })
             </div>
 
             <p>{price * quantity}$ CAD</p>
-            <button className="btn">Remove</button>
+            <button className="remove-btn btn">Remove</button>
         </div>
     )
 }

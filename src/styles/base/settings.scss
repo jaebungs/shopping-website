@@ -3,6 +3,8 @@ $orange: #ffb84d;
 $light-yellow: #f0ff82;
 $light-orange: #f7bb6a;
 $brown: #d97b00;
+$light-dark:#7d7d7d;
+$more-light-dark: #b5b5b5;
 
 $half-opacity: 0.5;
 $light-brown: rgba($brown, $half-opacity);
@@ -17,7 +19,7 @@ $l-margin: 13rem;
 $s-padding: 2rem;
 
 // grid
-$grid: 0.3fr 1fr 1fr 1.5fr 0.7fr 1.5fr;
+$grid: 0.3fr 1fr 1fr 1.5fr 1fr 0.8fr;
 
 // sizes
 $s-size: 1.6rem;

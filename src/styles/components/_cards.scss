@@ -26,7 +26,7 @@
 .cart-product-card {
     display: grid;
     grid-template-columns: $grid;
-    border: 1px solid #000;
+    border-bottom: 1px solid $light-dark;
     justify-items: center;
     align-items: center;
     margin: $xs-margin;
