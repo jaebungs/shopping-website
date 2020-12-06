@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
+import { Link } from 'react-router-dom';
 import ShoppingCartProductsTemplate from "./ShoppingCartProducts";
 
 const ShoppingCartPage = (props) => {
@@ -66,7 +67,9 @@ const ShoppingCartPage = (props) => {
           <p>Total(CAD)</p>
           <p>${parseFloat((subtotal * 1.3).toFixed(2))}</p>
         </div>
-        <button className="checkout-btn btn">Proceed to Checkout</button>
+        <Link to="/checkout" >
+          <button className="checkout-btn btn">Proceed to Checkout</button>
+        </Link>
         
       </div>
     </div>

@@ -1,6 +1,7 @@
 # Shopping Website
 
-This is one of React curriculum from The Odin Project - https://www.theodinproject.com/courses/javascript/lessons/shopping-chart#assignment 
+This is one of React curriculum from The Odin Project - https://www.theodinproject.com/courses/javascript/lessons/shopping-chart#assignment  
+Demo - 
 
 ### Build with  
 React  
