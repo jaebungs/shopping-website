@@ -13,6 +13,7 @@ const AppRouters = () => (
             <Header />
             <Switch>
                 <Route path='/' component={HomePage} exact />
+                <Route path='/shopping-website' component={HomePage} exact />
                 <Route path='/products' component={ProductsPage} />
                 <Route path='/cart' component={ShoppingCartPage} />
                 <Route path='/checkout' component={CheckoutPage} />
