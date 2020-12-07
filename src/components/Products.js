@@ -5,14 +5,13 @@ import { productQuantityDecrement, productQuantityIncrement, productQuantityEdit
 
 const ProductsTemplate = ({ id, img, name, price, quantity, dispatch, carts }) => {
 
-
   const onInputChange = (e) => {
-    const quantityInput = e.target.value
+    const quantityInput = e.target.value;
       
-      if (quantityInput === '' || quantityInput.match(/^[1-9][0-9]*$/)){
+      if (quantityInput.match(/^[0-9][0-9]*$/)){
           dispatch(productQuantityEdit(id, parseInt(quantityInput)));
-      } else {
-        quantityInput = parseInt(1)
+      } else if (quantityInput === '') {
+        dispatch(productQuantityEdit(id, 0));
       }
   }
 
