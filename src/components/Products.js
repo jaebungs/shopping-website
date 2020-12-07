@@ -8,6 +8,7 @@ const ProductsTemplate = ({ id, img, name, price, quantity, dispatch, carts }) =
   const onInputChange = (e) => {
     const quantityInput = e.target.value;
       
+    // Only allow to put above 0
       if (quantityInput.match(/^[0-9][0-9]*$/)){
           dispatch(productQuantityEdit(id, parseInt(quantityInput)));
       } else if (quantityInput === '') {
