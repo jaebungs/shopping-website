@@ -9,7 +9,7 @@
     "dev-server": "webpack-dev-server",
     "start": "webpack-cli serve --mode development",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d public"
   },
   "homepage": "https://jaebungs.github.io/shopping-website/",
   "dependencies": {
