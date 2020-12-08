@@ -7,3 +7,7 @@ Demo - https://jaebungs.github.io/shopping-website/
 React  
 Redux  
 sass  
+
+### images
+![alt-text](build/HomeScreen.png?raw=true)  
+![alt-text](build/CartScreen.png?raw=true)  
